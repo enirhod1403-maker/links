@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>עינת נירהוד שטמר</title>
+<meta name="description" content="מטפלת רגשית ומנחת סדנאות. מלווה נשים שנפגעו מינית מחיים של הישרדות לחיים מלאים בתחושת ביטחון.">
+<meta property="og:title" content="עינת נירהוד שטמר">
+<meta property="og:description" content="מטפלת רגשית ומנחת סדנאות">
+<meta property="og:image" content="einat.jpg">
+<meta name="theme-color" content="#785CB4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== צבעי המותג ===== */
+  :root{
+    --purple:#785CB4;      /* סגול עמוק */
+    --lilac:#AA83CB;       /* סגול עדין */
+    --sage:#7FBEB1;        /* ירוק מרווה */
+    --navy:#053F67;        /* כחול כהה */
+    --cream:#F7F7F7;       /* קרם */
+    --white:#FFFFFF;
+    --text:#454545;        /* טקסט גוף */
+    --lilac-soft:rgba(170,131,203,.15);
+    --sage-soft:rgba(127,190,177,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Heebo',system-ui,sans-serif;
+    color:var(--text);
+    background:var(--cream);
+    background-image:linear-gradient(180deg,var(--lilac-soft) 0%,var(--cream) 55%,var(--sage-soft) 100%);
+    min-height:100vh;
+    line-height:1.6;
+    font-size:17px;
+  }
+  a{color:inherit;text-decoration:none}
+  .page{max-width:480px;margin:0 auto;padding-bottom:28px}
+
+  /* ===== תמונה ===== */
+  .hero{position:relative}
+  .hero img{
+    display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center 30%;
+  }
+  @media (min-width:481px){ .hero img{border-radius:0 0 28px 28px} }
+
+  /* ===== כרטיס הפתיחה שעולה על התמונה ===== */
+  .intro{
+    position:relative;margin:-56px 16px 0;
+    background:var(--white);
+    border-radius:28px;
+    padding:26px 22px 24px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(5,63,103,.10);
+  }
+  .intro h1{color:var(--purple);font-size:30px;font-weight:800;line-height:1.2}
+  .intro .role{color:var(--navy);font-weight:500;font-size:17px;margin-top:6px}
+  .intro .line{margin-top:10px;font-size:16px}
+  .intro .leaf{display:block;width:44px;height:3px;margin:14px auto 0;border-radius:3px;background:var(--sage)}
+
+  /* ===== בחירת קהל ===== */
+  .choose{padding:30px 16px 0;text-align:center}
+  .choose h2{color:var(--navy);font-size:23px;font-weight:700;margin-bottom:16px}
+  .pills{display:flex;flex-direction:column;gap:12px}
+  .pill{
+    font:inherit;font-size:17px;font-weight:500;line-height:1.4;
+    width:100%;min-height:58px;padding:14px 22px;
+    border-radius:999px;cursor:pointer;
+    background:var(--white);color:var(--navy);
+    border:2px solid var(--lilac);
+    transition:background .25s,color .25s,border-color .25s,transform .15s,box-shadow .25s;
+  }
+  .pill:active{transform:scale(.98)}
+  .pill[aria-expanded="true"]{
+    background:var(--purple);border-color:var(--purple);color:var(--white);
+    box-shadow:0 6px 18px rgba(120,92,180,.30);
+  }
+  .pill:focus-visible,.card:focus-visible,.wa:focus-visible,.socials a:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
+
+  /* ===== לינקים ===== */
+  .panel{padding:22px 16px 0}
+  .panel[hidden]{display:none}
+  .panel.show{animation:fade .45s ease both}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.panel.show{animation:none}.pill{transition:none}}
+
+  .list{display:flex;flex-direction:column;gap:12px}
+  .card{
+    display:flex;align-items:center;gap:14px;
+    background:var(--white);
+    border:1px solid rgba(170,131,203,.45);
+    border-radius:20px;
+    padding:16px 18px;
+    transition:border-color .2s,box-shadow .2s,transform .15s;
+  }
+  .card:hover{border-color:var(--purple);box-shadow:0 6px 16px rgba(120,92,180,.12)}
+  .card:active{transform:scale(.99)}
+  .card .txt{flex:1}
+  .card strong{display:block;color:var(--purple);font-size:17px;font-weight:700;line-height:1.35}
+  .card span{display:block;font-size:15px;margin-top:3px;line-height:1.5}
+  .card .arrow{flex:none;width:30px;height:30px;border-radius:50%;background:var(--lilac-soft);display:grid;place-items:center;color:var(--purple)}
+  .card .arrow svg{width:16px;height:16px}
+  .card.meet{background:var(--sage-soft);border-color:var(--sage)}
+  .card.meet strong{color:var(--navy)}
+
+  /* ===== מועדים קרובים ===== */
+  .dates{
+    margin-bottom:14px;padding:18px 20px;border-radius:20px;
+    background:var(--lilac-soft);border-right:5px solid var(--purple);
+  }
+  .dates h3{color:var(--navy);font-size:15px;font-weight:700;letter-spacing:.02em}
+  .dates a{display:block;margin-top:6px}
+  .dates .when,.dates .what{display:block}
+  .dates .when{color:var(--purple);font-size:24px;font-weight:800;line-height:1.2}
+  .dates .what{color:var(--navy);font-weight:500}
+  .dates .go{display:inline-block;margin-top:8px;color:var(--purple);font-weight:700;font-size:15px;border-bottom:2px solid var(--sage)}
+
+  /* ===== וואטסאפ ===== */
+  .contact{padding:32px 16px 0;text-align:center}
+  .contact p{color:var(--navy);font-weight:500;margin-bottom:12px}
+  .wa{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    width:100%;min-height:62px;padding:16px 22px;border-radius:999px;
+    background:var(--purple);color:var(--white);
+    font-size:18px;font-weight:700;
+    box-shadow:0 8px 22px rgba(120,92,180,.35);
+    transition:background .2s,transform .15s;
+  }
+  .wa:hover{background:var(--navy)}
+  .wa:active{transform:scale(.98)}
+  .wa svg{width:26px;height:26px;flex:none}
+
+  /* ===== רשתות ===== */
+  .socials{display:flex;justify-content:center;gap:14px;margin-top:24px}
+  .socials a{
+    width:50px;height:50px;border-radius:50%;display:grid;place-items:center;
+    background:var(--white);color:var(--purple);border:1px solid rgba(170,131,203,.45);
+    transition:background .2s,color .2s;
+  }
+  .socials a:hover{background:var(--purple);color:var(--white)}
+  .socials svg{width:23px;height:23px}
+
+  /* ===== תחתית ===== */
+  footer{text-align:center;padding:30px 16px 0;font-size:13.5px;color:#6b6b6b;line-height:1.7}
+  footer .credit{margin-top:6px;font-size:12px;opacity:.85}
+  footer .credit a{border-bottom:1px solid currentColor}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ===== תמונה ===== -->
+  <div class="hero">
+    <img src="einat.jpg" alt="עינת נירהוד שטמר" width="1000" height="1000">
+  </div>
+
+  <!-- ===== שם ותיאור ===== -->
+  <section class="intro">
+    <h1>עינת נירהוד שטמר</h1>
+    <p class="role">מטפלת רגשית ומנחת סדנאות</p>
+    <p class="line">מלווה נשים שנפגעו מינית מחיים של הישרדות לחיים מלאים בתחושת ביטחון</p>
+    <span class="leaf" aria-hidden="true"></span>
+  </section>
+
+  <!-- ===== בחירת קהל ===== -->
+  <section class="choose">
+    <h2>מה מביא אותך לכאן?</h2>
+    <div class="pills">
+      <button class="pill" aria-expanded="false" aria-controls="p-care" data-panel="p-care">🌿 אני מחפשת ליווי וטיפול</button>
+      <button class="pill" aria-expanded="false" aria-controls="p-learn" data-panel="p-learn">✨ אני רוצה ללמוד ולהרחיב את היכולת האנרגטית שלי</button>
+    </div>
+  </section>
+
+  <!-- ===== קהל 1: ליווי וטיפול ===== -->
+  <section class="panel" id="p-care" hidden>
+    <div class="list">
+      <a class="card meet" href="https://wa.me/972543554354?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%99%D7%A0%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%A4%D7%92%D7%99%D7%A9%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA%20%D7%9C%D7%9C%D7%90%20%D7%A2%D7%9C%D7%95%D7%AA" target="_blank" rel="noopener">
+        <div class="txt"><strong>פגישת היכרות ללא עלות</strong><span>שיחה ראשונה, בקצב שלך, לראות אם זה מתאים</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+      <a class="card" href="https://vimeo.com/1004791161?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <div class="txt"><strong>תרגיל הרפיה למקום בטוח</strong><span>2 דקות של נשימה, כשצריך רגע של שקט</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+      <a class="card" href="https://vimeo.com/1003776783?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <div class="txt"><strong>תרגיל להרפיה מלאה ולקרקוע</strong><span>כ-9 דקות של חזרה לגוף ולקרקע</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+      <a class="card" href="https://vimeo.com/1046054954?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <div class="txt"><strong>מדיטציית חיבור לעוצמה הפנימית</strong><span>כ-7 דקות של חיבור לכוח שכבר קיים בך</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+      <a class="card" href="https://www.einatnirhod.com/?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <div class="txt"><strong>להכיר אותי ואת הדרך שלי</strong><span>30 שנה של ליווי, והכלים שאני עובדת איתם</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== קהל 2: לימוד ===== -->
+  <section class="panel" id="p-learn" hidden>
+
+    <!-- מועדים קרובים: לעדכן כאן תאריך ושם -->
+    <div class="dates">
+      <h3>🗓️ מועדים קרובים</h3>
+      <a href="https://einatnirhod.ravpage.co.il/reiki1?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <span class="when">17.12.26</span>
+        <span class="what">קורס רייקי 1 נפתח בהוד השרון</span>
+        <span class="go">לפרטים והרשמה</span>
+      </a>
+      <a href="https://einatnirhod.ravpage.co.il/witchcraft?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <span class="when">12.1.27</span>
+        <span class="what">המחזור הבא של קורס "מכשפות" נפתח</span>
+        <span class="go">לפרטים והרשמה</span>
+      </a>
+    </div>
+
+    <div class="list">
+      <a class="card" href="https://einatnirhod.ravpage.co.il/reiki1?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <div class="txt"><strong>קורס רייקי 1: הכוח בידיים שלך</strong><span>חמישה מפגשים לטיפול עצמי ולטיפול באחרים, בלי צורך בידע קודם</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+      <a class="card" href="https://einatnirhod.ravpage.co.il/witchcraft?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <div class="txt"><strong>קורס "מכשפות": מודעות וכלים לריפוי עצמי</strong><span>לכל מי שמרגישה את היכולת ורוצה להרחיב אותה ואת הידע עליה</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+      <a class="card" href="https://vimeo.com/1046054954?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <div class="txt"><strong>מדיטציית חיבור לעוצמה הפנימית</strong><span>טעימה מהעבודה האנרגטית, כ-7 דקות</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+      <a class="card" href="https://www.einatnirhod.com/Lectures?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener">
+        <div class="txt"><strong>קורסים וסדנאות נוספים</strong><span>כל מה שאני מלמדת, במקום אחד</span></div>
+        <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== וואטסאפ ורשתות ===== -->
+  <section class="contact">
+    <p>הדרך הכי מהירה לדבר איתי</p>
+    <a class="wa" href="https://wa.me/972543554354?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%99%D7%A0%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%A4%D7%92%D7%99%D7%A9%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA%20%D7%9C%D7%9C%D7%90%20%D7%A2%D7%9C%D7%95%D7%AA" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.6c0 3 2.5 6.1 6 6.6l1.2-1.4-1.9-1-.9.8c-1-.5-2-1.5-2.4-2.4l.8-.9-1-1.9z" fill="currentColor" stroke-width="1"/></svg>
+      שלחי לי הודעה בוואטסאפ
+    </a>
+
+    <nav class="socials" aria-label="רשתות חברתיות">
+      <a href="https://www.instagram.com/einatnirhod/?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener" aria-label="אינסטגרם">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/einat.nirhodshtemer?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener" aria-label="פייסבוק">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@einatnirhodshtemer7274?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener" aria-label="יוטיוב">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@einat_nirhod_shtemer?utm_source=instagram&amp;utm_medium=linkinbio" target="_blank" rel="noopener" aria-label="טיקטוק">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></svg>
+      </a>
+    </nav>
+  </section>
+
+  <footer>
+    <p>התוכן נכתב בלשון נשית, ומתאים ומזמין גם גברים 💜</p>
+    <p class="credit">נבנה בעזרת הפרומפט של <a href="https://www.instagram.com/hila_hayeila/" target="_blank" rel="noopener">@hila_hayeila</a></p>
+  </footer>
+</main>
+
+<script>
+  // החלפת קהל: לחיצה על כפתור מציגה רק את הלינקים שלו
+  document.querySelectorAll('.pill').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.dataset.panel;
+      document.querySelectorAll('.pill').forEach(function (b) {
+        b.setAttribute('aria-expanded', b === btn ? 'true' : 'false');
+      });
+      document.querySelectorAll('.panel').forEach(function (p) {
+        var on = p.id === target;
+        p.hidden = !on;
+        p.classList.toggle('show', on);
+      });
+    });
+  });
+</script>
+</body>
+</html>
